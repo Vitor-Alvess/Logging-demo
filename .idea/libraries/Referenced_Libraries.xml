@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Referenced Libraries">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../jar/slf4j-api-2.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jar/slf4j-simple-2.0.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jar/apache-log4j-2.3.2-bin/log4j-api-2.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jar/apache-log4j-2.3.2-bin/log4j-core-2.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../jar/apache-log4j-2.3.2-bin/log4j-slf4j-impl-2.3.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

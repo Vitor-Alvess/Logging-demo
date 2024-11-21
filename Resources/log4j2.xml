@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Properties>
+        <Property name="filename">./logs</Property>
+    </Properties>
+    <ThresholdFilter level="debug"/>
+
+    <Appenders>
+        <Console name="stdout" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+
+        <RollingFile name="file"
+                     fileName="${filename}/logdemo.log"
+                     filePattern="${filename}/logdemo-%d{HH:mm:ss.SSS}.log">
+
+            <PatternLayout>
+                <pattern>%d{HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</pattern>
+            </PatternLayout>
+
+            <SizeBasedTriggeringPolicy size="1 KB" />
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="Second" level="error" additivity="false">
+            <AppenderRef ref="stdout"/>
+            <AppenderRef ref="file"/>
+        </Logger>
+
+        <Root level="trace">
+            <AppenderRef ref="stdout"/>
+            <AppenderRef ref="file"/>
+        </Root>
+    </Loggers>
+</Configuration>
